@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------
+   1. Brand Background Theme Mode Overrides (Global Theme Switcher)
+   ------------------------------------------------------------- */
+
+/* Theme Light Mode Variables */
+.theme-light {
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-subtle: #e2e8f0;
+}
+
+/* Theme Dark Mode Variables */
+.theme-dark {
+  --bg-app: #090d16;
+  --bg-card: #111827;
+  --bg-card-hover: #1f2937;
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --border-subtle: #1f2937;
+}
+
+/* Theme Dark Green Mode Variables */
+.theme-dark-green {
+  --bg-app: #031c12;
+  --bg-card: #052e1d;
+  --bg-card-hover: #064e3b;
+  --text-primary: #ecfdf5;
+  --text-secondary: #d1fae5;
+  --text-muted: #a7f3d0;
+  --border-subtle: #064e3b;
+}
+
+/* Theme Current Mode Variables (Classic Midnight Purple) */
+.theme-current {
+  --bg-app: #090616;
+  --bg-card: #130f26;
+  --bg-card-hover: #1c153b;
+  --text-primary: #f5f3ff;
+  --text-secondary: #e9d5ff;
+  --text-muted: #c084fc;
+  --border-subtle: #2e1a4f;
+}
+
+/* Apply background theme overrides to classes across the app */
+.theme-light, .theme-dark, .theme-dark-green, .theme-current {
+  /* Page Body / Screens */
+  body, 
+  .bg-white,
+  .bg-slate-950,
+  .dark\:bg-slate-950,
+  .bg-slate-900,
+  .dark\:bg-slate-900,
+  .bg-gray-950,
+  .dark\:bg-gray-950,
+  .bg-black,
+  .bg-slate-50,
+  .bg-slate-50\/50,
+  .bg-slate-100\/50,
+  .bg-gray-50,
+  .bg-gray-50\/50,
+  .bg-slate-50\/30,
+  .bg-slate-50\/80 {
+    background-color: var(--bg-app) !important;
+    color: var(--text-primary) !important;
+  }
+
+  /* Cards, Rows, Accordions, Sidebars */
+  .bg-slate-900\/40,
+  .dark\:bg-slate-900\/40,
+  .bg-slate-900\/50,
+  .dark\:bg-slate-900\/50,
+  .bg-slate-900\/60,
+  .dark\:bg-slate-900\/60,
+  .bg-slate-950\/50,
+  .bg-slate-900\/80,
+  .dark\:bg-slate-900\/80,
+  .bg-slate-900,
+  .dark\:bg-slate-900,
+  .bg-slate-850,
+  .bg-slate-800,
+  .dark\:bg-slate-800,
+  .bg-white\/5,
+  .dark\:bg-white\/5,
+  .bg-white\/10,
+  .dark\:bg-white\/10,
+  .bg-slate-900\/20,
+  .dark\:bg-slate-900\/20,
+  .bg-slate-950\/30,
+  .dark\:bg-slate-950\/30,
+  .bg-slate-950,
+  .bg-gray-900,
+  .bg-slate-100,
+  .bg-gray-100,
+  .bg-slate-100\/10,
+  .bg-slate-200\/10 {
+    background-color: var(--bg-card) !important;
+  }
+
+  /* Card and List Hover Effects */
+  .hover\:bg-slate-800\/50:hover,
+  .dark\:hover\:bg-slate-800\/50:hover,
+  .hover\:bg-slate-800:hover,
+  .dark\:hover\:bg-slate-800:hover,
+  .hover\:bg-slate-900:hover,
+  .dark\:hover\:bg-slate-900:hover,
+  .hover\:bg-slate-950:hover,
+  .dark\:hover\:bg-slate-950:hover {
+    background-color: var(--bg-card-hover) !important;
+  }
+
+  /* Primary Text Colors */
+  .text-white,
+  .dark\:text-white,
+  .text-slate-100,
+  .dark\:text-slate-100,
+  .text-slate-200,
+  .dark\:text-slate-200,
+  .text-slate-900,
+  .dark\:text-slate-900,
+  .text-gray-900,
+  .dark\:text-gray-900 {
+    color: var(--text-primary) !important;
+  }
+
+  /* Secondary Text Colors */
+  .text-slate-300,
+  .dark\:text-slate-300,
+  .text-slate-400,
+  .dark\:text-slate-400,
+  .text-slate-700,
+  .dark\:text-slate-700,
+  .text-slate-800,
+  .dark\:text-slate-800 {
+    color: var(--text-secondary) !important;
+  }
+
+  /* Muted Text Colors */
+  .text-slate-500,
+  .dark\:text-slate-500,
+  .text-slate-600,
+  .dark\:text-slate-600 {
+    color: var(--text-muted) !important;
+  }
+
+  /* Structural Border Colors */
+  .border-slate-800,
+  .dark\:border-slate-800,
+  .border-slate-900,
+  .dark\:border-slate-900,
+  .border-slate-700,
+  .dark\:border-slate-700,
+  .border-white\/10,
+  .border-slate-800\/60,
+  .dark\:border-slate-800\/60,
+  .border-slate-200,
+  .dark\:border-slate-200,
+  .border-slate-100,
+  .dark\:border-slate-100,
+  .border-slate-300,
+  .dark\:border-slate-300,
+  .border-gray-200,
+  .dark\:border-gray-200 {
+    border-color: var(--border-subtle) !important;
+  }
+}
+
+/* -------------------------------------------------------------
+   2. Brand Theme Accent Color Customizations (Classic Purple)
+   ------------------------------------------------------------- */
+:root {
+  --theme-primary: #8b5cf6;
+  --theme-hover: #7c3aed;
+  --theme-light: #f3e8ff;
+  --theme-border: #ddd6fe;
+  --theme-gradient-start: #8b5cf6;
+  --theme-gradient-end: #6366f1;
+}
+
+/* Text Accent Overrides */
+.text-purple-600, 
+.text-purple-700, 
+.dark\:text-purple-400, 
+.dark\:text-purple-300, 
+.group-hover\:text-purple-600, 
+.dark\:group-hover\:text-purple-400,
+.hover\:text-purple-600:hover,
+.dark\:hover\:text-purple-400:hover {
+  color: var(--theme-primary) !important;
+}
+
+/* Background Accent Overrides */
+.bg-purple-600, 
+.dark\:bg-purple-600,
+.bg-purple-700,
+.dark\:bg-purple-700,
+.hover\:bg-purple-700:hover, 
+.dark\:hover\:bg-purple-700:hover,
+.hover\:bg-purple-600:hover,
+.dark\:hover\:bg-purple-600:hover,
+.bg-purple-600\/10,
+.bg-purple-500 {
+  background-color: var(--theme-primary) !important;
+}
+
+/* Background Light/Muted Overrides */
+.bg-purple-50, 
+.bg-purple-100, 
+.dark\:bg-purple-950\/60,
+.dark\:bg-purple-900\/40, 
+.hover\:bg-purple-100:hover, 
+.dark\:hover\:bg-purple-900\/60:hover,
+.hover\:bg-purple-50:hover,
+.bg-purple-50\/50,
+.dark\:bg-purple-950\/20 {
+  background-color: var(--theme-light) !important;
+}
+
+/* Border Accent Overrides */
+.border-purple-200, 
+.dark\:border-purple-800,
+.dark\:border-purple-800\/60,
+.border-purple-200\/80,
+.dark\:border-purple-800\/80,
+.border-purple-500,
+.focus\:border-purple-500:focus,
+.group-hover\:border-purple-500 {
+  border-color: var(--theme-border) !important;
+}
+
+/* Gradient Flow Overrides */
+.from-purple-600, 
+.from-purple-700,
+.from-purple-500 {
+  --tw-gradient-from: var(--theme-gradient-start) !important;
+  --tw-gradient-to: var(--theme-gradient-end) !important;
+  --tw-gradient-stops: var(--theme-gradient-start), var(--theme-gradient-end) !important;
+}
+
+.to-indigo-600, 
+.to-indigo-700,
+.to-indigo-500 {
+  --tw-gradient-to: var(--theme-gradient-end) !important;
+}
+
+/* Input Focus Ring and Checkbox Accents */
+.focus\:ring-purple-500:focus,
+.focus-within\:ring-purple-500 {
+  --tw-ring-color: var(--theme-primary) !important;
+  border-color: var(--theme-primary) !important;
+}
+
+.accent-purple-600, 
+.accent-purple-500 {
+  accent-color: var(--theme-primary) !important;
+}

@@ -1,0 +1,15 @@
+{
+  "entities": {
+    "admins": {
+      "title": "Admin Users",
+      "description": "Authorized administrator accounts for the Admin Panel",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "role": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "role"]
+    }
+  }
+}

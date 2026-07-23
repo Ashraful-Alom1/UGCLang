@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Admin checking function
+    function isAdmin() {
+      return request.auth != null && (
+        request.auth.token.email.matches('.*@ugclage\\.in') ||
+        request.auth.token.email == 'ashrafulalom12042002@gmail.com'
+      );
+    }
+
+    // Admins collection
+    match /admins/{adminId} {
+      allow read, write: if true;
+    }
+
+    // Creators collection - public read & write for creator profile registration & edits
+    match /creators/{creatorId} {
+      allow read, write: if true;
+    }
+
+    // Applications collection
+    match /applications/{appId} {
+      allow read, write: if true;
+    }
+
+    // Orders collection
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+
+    // Languages collection
+    match /languages/{langId} {
+      allow read, write: if true;
+    }
+
+    // Default fallback
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "UGCLage.com - India's UGC Creator Marketplace",
+  "description": "India's premier marketplace connecting brands with verified UGC creators across 12+ Indian languages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
